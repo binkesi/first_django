@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Defaule title{% endblock %}</title>
+</head>
+<body>
+<a href="{% url 'my_app:index' %}">Blizzard game notes</a> -
+<a href="{% url 'my_app:topics' %}">Game Topics</a>
+<p>{% block content %}Welcome to my app!{% endblock %}</p>
+</body>
+
+</html>

@@ -1,0 +1,11 @@
+{% extends "my_app/base.html" %}
+{% block title %}new_entry{% endblock title%}
+{% block content %}
+    <p><a href="{% url 'my_app:topic' topic.id %}">{{ topic }}</a></p>
+    <p>Add a new entry:</p>
+    <form action="{% url 'my_app:new_entry' topic.id %}"method='post'>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button name="submit">add entry</button>
+    </form>
+{% endblock content%}
