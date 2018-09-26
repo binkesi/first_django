@@ -1,3 +1,17 @@
 {% extends "./base.html" %}
 {% block title %}Blizzard Game Notes.{% endblock %}
-{% block content %}Let's take some notes about blizzard games.{% endblock %}
+{% block header %}
+    <div class="jumbotron">
+        <h1>Enjoy Blizzard Games!</h1>
+    </div>
+{% endblock header %}
+{% block content %}
+    <h2>
+        <a href="{% url 'users:register' %}">Register an account</a> to make
+        your own Game Notes, and list the topics you're taking.
+    </h2>
+    <h3>
+        Whenever you have some new skill of some game, make an entry
+        to summarize what you've learned.
+    </h3>
+{% endblock %}
